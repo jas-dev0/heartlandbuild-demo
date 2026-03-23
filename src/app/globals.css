@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Inter:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --stone-deep:   #2c2416;
+  --stone:        #3d3120;
+  --stone-light:  #5a4a30;
+  --amber:        #c17f3a;
+  --amber-light:  #d4954f;
+  --amber-pale:   #f5e6d0;
+  --cream:        #faf6ef;
+  --warm-white:   #fff9f2;
+  --muted:        #8a7a65;
+  --border:       rgba(193,127,58,0.15);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--warm-white);
+  color: var(--stone-deep);
+  font-family: 'Inter', sans-serif;
+}
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.section-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 0.5px;
+  background: var(--amber);
+  flex-shrink: 0;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fadeUp 0.65s ease both; }
